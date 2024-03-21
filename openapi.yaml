@@ -42,7 +42,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Pet'          
+                  $ref: '#/components/schemas/Pet'
             application/xml:
               schema:
                 type: array
@@ -54,7 +54,7 @@ paths:
         - petstore_auth:
             - write:pets
             - read:pets
-            
+
     post:
       tags:
         - order
@@ -74,7 +74,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Pet'          
+                $ref: '#/components/schemas/Pet'
             application/xml:
               schema:
                 $ref: '#/components/schemas/Pet'
@@ -117,7 +117,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Pet'          
+                  $ref: '#/components/schemas/Pet'
             application/xml:
               schema:
                 type: array
@@ -129,7 +129,7 @@ paths:
         - petstore_auth:
             - write:pets
             - read:pets
-            
+
   /api/orders/{id}:
     get:
       tags:
@@ -153,7 +153,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Pet'          
+                  $ref: '#/components/schemas/Pet'
             application/xml:
               schema:
                 type: array
@@ -165,7 +165,7 @@ paths:
         - petstore_auth:
             - write:pets
             - read:pets
-            
+
   /api/orders/{id}/pay:
     put:
       tags:
@@ -187,7 +187,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Pet'          
+                $ref: '#/components/schemas/Pet'
             application/xml:
               schema:
                 $ref: '#/components/schemas/Pet'
@@ -227,7 +227,7 @@ paths:
         - petstore_auth:
             - write:pets
             - read:pets
-  
+
   /api/products:
     get:
       tags:
@@ -247,7 +247,7 @@ paths:
                   format: int32
       security:
         - api_key: []
-    
+
     post:
       tags:
         - product
@@ -266,7 +266,7 @@ paths:
                   format: int32
       security:
         - api_key: []
-  
+
   /api/products/top:
     get:
       tags:
@@ -286,7 +286,7 @@ paths:
                   format: int32
       security:
         - api_key: []
-            
+
   /api/products/{id}:
     get:
       tags:
@@ -313,7 +313,7 @@ paths:
           description: Invalid input
         '422':
           description: Validation exception
-  
+
     put:
       tags:
         - product
@@ -350,7 +350,7 @@ paths:
           description: Invalid input
         '422':
           description: Validation exception
-    
+
     delete:
       tags:
         - product
@@ -376,7 +376,7 @@ paths:
           description: Invalid input
         '422':
           description: Validation exception
-  
+
   /api/products/{id}/reviews:
     post:
       tags:
@@ -414,9 +414,9 @@ paths:
           description: Invalid input
         '422':
           description: Validation exception
-  
+
   # 3.6 @desc    Get all users
-#     @route   GET /api/users
+  #     @route   GET /api/users
   /api/users:
     get:
       tags:
@@ -436,8 +436,8 @@ paths:
         '422':
           description: Validation exception
 
-# 3.2 @desc    Register a new user
-#     @route   POST /api/users
+    # 3.2 @desc    Register a new user
+    #     @route   POST /api/users
     post:
       tags:
         - user
@@ -468,8 +468,8 @@ paths:
                 $ref: '#/components/schemas/User'
 
 
-# 3.8 @desc    Get user by ID
-#     @route   GET /api/users/:id
+  # 3.8 @desc    Get user by ID
+  #     @route   GET /api/users/:id
   /api/users/{id}:
     get:
       tags:
@@ -496,9 +496,9 @@ paths:
           description: Invalid input
         '422':
           description: Validation exception
-  
-# 3.9 @desc    Update user
-#     @route   PUT /api/users/:id
+
+    # 3.9 @desc    Update user
+    #     @route   PUT /api/users/:id
     put:
       tags:
         - user
@@ -525,8 +525,8 @@ paths:
         '422':
           description: Validation exception
 
-# 3.7 @desc    Delete user
-#     @route   DELETE /api/users/:id
+    # 3.7 @desc    Delete user
+    #     @route   DELETE /api/users/:id
     delete:
       tags:
         - user
@@ -554,8 +554,8 @@ paths:
           description: Validation exception
 
 
-#   3.1 @desc    Auth user & get token
-#     @route   POST /api/users/auth
+  #   3.1 @desc    Auth user & get token
+  #     @route   POST /api/users/auth
   /api/users/auth:
     post:
       tags:
@@ -600,8 +600,8 @@ paths:
         '400':
           description: Invalid username/password supplied
 
-# 3.3 @desc    Logout user / clear cookie
-#     @route   POST /api/users/logout
+  # 3.3 @desc    Logout user / clear cookie
+  #     @route   POST /api/users/logout
   /api/users/logout:
     post:
       tags:
@@ -614,8 +614,8 @@ paths:
         default:
           description: successful operation
 
-# 3.4 @desc    Get user profile
-#     @route   GET /api/users/profile
+  # 3.4 @desc    Get user profile
+  #     @route   GET /api/users/profile
   /api/users/profile:
     get:
       tags:
@@ -635,8 +635,8 @@ paths:
         '422':
           description: Validation exception
 
-# 3.5 @desc    Update user profile
-#     @route   PUT /api/users/profile
+    # 3.5 @desc    Update user profile
+    #     @route   PUT /api/users/profile
     put:
       tags:
         - user
