@@ -5,7 +5,7 @@ spring:
     platform: postgres
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/ecommerce
-    username: root
+    username: postgres
     password: root
   jpa:
     database: POSTGRESQL
@@ -13,3 +13,7 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create-drop
+
+jwt:
+  private-key: classpath:app.key
+  public-key: classpath:app.pub
