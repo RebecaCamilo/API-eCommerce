@@ -1,13 +1,13 @@
 package com.loja.ecommerce.repository;
 
-import com.loja.ecommerce.model.User;
+import com.loja.ecommerce.model.Role;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends CrudRepository<User, Long> {
+public interface RoleRepository extends CrudRepository<Role, Integer> {
 
-    Optional<User> findByUsername(String username);
+    Optional<Role> findByDescription(String description);
 }
